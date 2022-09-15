@@ -3,6 +3,9 @@ import Section from '../Section';
 import FeedbackOptions from '../FeedbackOptions';
 import Statistics from '../Statistics';
 import Notification from '../Notification';
+import { Global } from '@emotion/react';
+import { GlobalStyles } from '../App/GlobalStyles.styled';
+import { Container } from '../App/Container.styled';
 
 class App extends Component {
   state = {
@@ -29,27 +32,30 @@ class App extends Component {
     const { good, neutral, bad } = this.state;
     const btnArr = ['good', 'neutral', 'bad'];
     return (
-      <div>
-        <Section title="Please,leave feedback">
-          <FeedbackOptions
-            options={btnArr}
-            onLeaveFeedback={this.clickOnBtnFeedback}
-          ></FeedbackOptions>
-        </Section>
-        <Section title="Statistics">
-          {this.countTotalFeedback() ? (
-            <Statistics
-              good={good}
-              neutral={neutral}
-              bad={bad}
-              total={this.countTotalFeedback()}
-              positivePesnt={this.countPositiveFeedbackPercentage()}
-            ></Statistics>
-          ) : (
-            <Notification message="There is no feedback"></Notification>
-          )}
-        </Section>
-      </div>
+      <>
+        <Global styles={GlobalStyles} />
+        <Container>
+          <Section title="Please,leave feedback">
+            <FeedbackOptions
+              options={btnArr}
+              onLeaveFeedback={this.clickOnBtnFeedback}
+            ></FeedbackOptions>
+          </Section>
+          <Section title="Statistics">
+            {this.countTotalFeedback() ? (
+              <Statistics
+                good={good}
+                neutral={neutral}
+                bad={bad}
+                total={this.countTotalFeedback()}
+                positivePesnt={this.countPositiveFeedbackPercentage()}
+              ></Statistics>
+            ) : (
+              <Notification message="There is no feedback"></Notification>
+            )}
+          </Section>
+        </Container>
+      </>
     );
   }
 }
