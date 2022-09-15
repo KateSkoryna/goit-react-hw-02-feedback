@@ -3,7 +3,7 @@ import { css } from '@emotion/react';
 const GlobalStyles = css`
   body {
     margin: 0;
-    background-color: #e7ecf2;
+    background-color: #a6c2ce;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto',
       'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans',
       'Helvetica Neue', sans-serif;
@@ -17,7 +17,13 @@ const GlobalStyles = css`
   }
 
   h1,
-  h2,
+  h2 {
+    font-size: 42px;
+    font-weight: 900;
+    margin-top: 0px;
+    margin-bottom: 20px;
+  }
+
   h3,
   h4,
   h5,

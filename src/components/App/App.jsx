@@ -35,7 +35,7 @@ class App extends Component {
       <>
         <Global styles={GlobalStyles} />
         <Container>
-          <Section title="Please,leave feedback">
+          <Section title="Please, leave feedback">
             <FeedbackOptions
               options={btnArr}
               onLeaveFeedback={this.clickOnBtnFeedback}
