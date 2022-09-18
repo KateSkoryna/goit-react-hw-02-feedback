@@ -11,16 +11,22 @@ const Statistics = ({ good, neutral, bad, total, positivePesnt }) => {
       <StatisticsTotal>Total feedbacks: {total}</StatisticsTotal>
       <StatisticsList>
         <StatisticsItem>
-          <p>Good:</p>
-          <p>{good}</p>
+          <p>
+            Good: <br />
+            {good}
+          </p>
         </StatisticsItem>
         <StatisticsItem>
-          <p>Neutral:</p>
-          <p>{neutral}</p>
+          <p>
+            Neutral: <br />
+            {neutral}
+          </p>
         </StatisticsItem>
         <StatisticsItem>
-          <p>Bad:</p>
-          <p>{bad}</p>
+          <p>
+            Bad: <br />
+            {bad}
+          </p>
         </StatisticsItem>
       </StatisticsList>
       {positivePesnt ? <h3>Positive Feedback: {positivePesnt}%</h3> : ''}
