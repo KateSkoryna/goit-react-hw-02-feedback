@@ -30,7 +30,7 @@ class App extends Component {
 
   render() {
     const { good, neutral, bad } = this.state;
-    const btnArr = ['good', 'neutral', 'bad'];
+    const btnArr = Object.keys(this.state);
     return (
       <>
         <Global styles={GlobalStyles} />
